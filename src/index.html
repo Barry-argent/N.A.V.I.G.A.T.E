@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N.A.V.E.G.A.T.E</title>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <link rel="stylesheet" href="./output.css">
+  <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%; 
+        font-family: Arial, sans-serif;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .fade-in {
+        animation: fadeIn 2s ease-in;
+    }
+
+    .video-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+
+    video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .hidden {
+        opacity: 0;
+        z-index: -1;
+    }
+
+    .visible {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    header {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    input[type="search"] {
+        width: 25rem;
+        padding: 0 1rem;
+        color: black;
+        outline: none;
+        border-radius: 0.25rem;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #ff4d4d;
+        color: white;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #e60000;
+    }
+
+    footer {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+    }
+  </style>
+</head>
+<body class="bg-[#f9e7e7] relative">
+
+<div class="video-container">
+    <video id="video1" class="visible" autoplay loop muted>
+        <source src="../../assets/vedio2.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div style="background-color: rgba(0, 0, 0, 0.3);" class="absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center text-white z-10">
+    <header class="w-full flex justify-between items-center p-4">
+        <div class="text-xl font-bold"><img src="/assets/logo.png" class="w-1/2"></div>
+        <div>    
+            <input type="search" placeholder="Search" class="outline-none rounded text-black">
+        </div>
+        <nav class="flex space-x-4"> 
+            <a href="#" class="btn">Sign up / Login</a>
+        </nav>
+    </header>
+    <main class="flex-1 flex flex-col gap-4 justify-center items-center text-center">
+        <h1 class="text-4xl md:text-6xl font-bold fade-in mb-4">Your Smooth Travel Assistant</h1>
+        <div class="flex gap-4">
+            <a href="#" class="btn">Booking and Additional Service</a>
+            <a href="#" class="btn">Destinations</a>
+            <a href="#" class="btn">Survey and Personalization</a>
+        </div>
+        <div class="flex items-center fade-in px-4 py-2 rounded-full justify-center bg-red-300 hover:bg-red-500 shadow">
+            <a href="./component/landing.html" class="text-3xl font-bold">Let's Start Our Adventure <i class="uil uil-sign-out-alt"></i></a>
+        </div>
+    </main>
+    <footer class="w-full flex justify-center p-4">
+        <p>&copy; 2024 Navigate. All rights reserved.</p>
+    </footer>
+</div>
+
+</body>
+</html>

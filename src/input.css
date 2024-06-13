@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header{
+    @apply opacity-0 translate-y-8 transition-all duration-500 delay-[2200ms]
+}
