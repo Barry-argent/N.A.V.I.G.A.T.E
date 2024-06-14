@@ -6,11 +6,714 @@
   <title>N.A.V.E.G.A.T.E</title>
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
   <link rel="stylesheet" href="../output.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+    
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Urbanist', sans-serif;
+      }
+      
+    a:hover {
+      font-size: 2rem;
+      transition: all 1s linear;
+    }
+    
+    .urban {
+      font-family: "Urbanist", sans-serif;
+    }
+    
+    .just {
+      font-family: "Just Another Hand", cursive;
+      font-weight: 400;
+    }
+    
+    a:hover::after {
+      display: block;
+      content: "";
+      position: relative;
+      width: 0%;
+      margin-top: 5px;
+      height: 5px;
+      background: linear-gradient(90deg, rgb(67, 0, 231) 0%, rgb(125, 0, 252) 100%);
+      bottom: 0;
+      left: 0;
+      animation: fadeout linear 2s;
+    }
+    
+    @keyframes fadeout {
+      0% {
+        width: 0%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+    
+    .main {
+      position: relative;
+      height: 100vh;
+      background: url('../../assets/banner_img_3.webp') no-repeat center center/cover;
+    }
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    
+    nav {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo img {
+      width: 100px;
+    }
+    
+    .dropdown-content {
+      display: flex;
+      gap: 1rem;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: white;
+    }
+    
+    .talk {
+      background: linear-gradient(90deg, rgb(67, 0, 231) 0%, rgb(125, 0, 252) 100%);
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      border-radius: 9999px;
+      color: white;
+    }
+    
+    .main-content {
+      position: relative;
+      display: flex; 
+      justify-content: space-between;
+      height: calc(100vh - 4rem);
+      padding: 0 2rem;
+    }
+    
+    .text-content {
+      text-align: center;
+      color: white;
+    }
+    
+    .text-content .just {
+      font-size: 4rem;
+    }
+    
+    .text-content h1 {
+      font-size: 5rem;
+      font-weight: 700;
+    }
+    
+    .text-content small {
+      display: block;
+      margin-top: 1rem;
+      font-size: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .search-bar {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 9999px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 700px;
+      margin: 2rem auto 0 auto;
+      top: 30rem;
+      left: 8rem;
+
+}
+    
+    .search-bar div {
+      flex: 1;
+    }
+    
+    .search-bar div input,
+    .search-bar div select {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .search-bar button {
+      background: linear-gradient(90deg, rgb(67, 0, 231) 0%, rgb(125, 0, 252) 100%);
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+    .travel{
+      animation: moveUpDown 3s linear infinite;
+    }
+    @keyframes moveUpDown {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px); /* Move up by 10 pixels */
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .move{
+      animation: moveUpDown 3s linear infinite; /* Move up and down every 3 seconds */
+    }
+    .moving {
+      position: absolute;
+      top: 7rem;
+      left: 0;
+      animation: moveXAxis 5s linear infinite; /* Move horizontally every 5 seconds */
+    }
+    @keyframes moveXAxis {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    .icon {
+            transition: transform 1s ease-in-out;
+        }
+
+        .reveal-icon {
+            transform: translateY(-50px);
+        }
+        .cards{
+          @apply flex  rounded-lg flex-col gap-6 ;
+          border: 1px solid rgb(61, 6, 92);
+          
+        }
+        .custom-bg {
+            background-image: url('/assets/wc-bg2.webp'); /* Use the actual image path for the background */
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-custom {
+            background-image: url('/assets/dis-bg.webp'); /* Use the actual image path */
+            background-size: cover;
+            background-position: center;
+        }
+
+  </style>
+  
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
 </head>
- <body>
-    <div class="main relative ">
-        <img src="../../assets/banner_img_3.webp" class=" w-full h-full object-cover" alt="">
- 
+<body>
+  <div class="main">
+    <div class="overlay">
+      <nav>
+        <div class="logo ">
+          <img src="/assets/logo.png" alt="Logo">
+        </div>
+        <div class="dropdown">
+          <div class="dropdown-content">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Toure</a>
+            <a href="#">Pages</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <div class="talk">
+          <i class="uil uil-comment ml-4"></i>
+          <p class="font-[400] ml-4">Let's Talk</p>
+          <i class="uil uil-search ml-4"></i>
+        </div>
+      </nav>
+      <div class="main-content">
+        <div class="text-content">
+          <p class="just">Discover Your</p>
+          <h1 class="urban">Next <span class="typing">Adventure</span></h1>
+          <small>Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris nullam the Lorem ipsum dolor sit amet consectetur adipiscing elit.</small>
+        </div>
+        <div class="image-content relative">
+          <div class="">
+            <img src="/assets/cloud1.webp"  class="moving" alt="">
+          </div>
+          <img src="/assets/banner_men.webp" class="move w-[70%]" alt="Travel Image">
+        </div>
+      </div>
+      <div class="search-bar absolute ">
+        <div style="background: linear-gradient( 90deg, rgb(67,0,231) 0%, rgb(125,0,252) 100%); top: -3rem; left: 3rem;" class="absolute text-white font-semibold rounded-full flex item-center gap-4 p-4">
+            <div class="flex items-center gap-2">
+               <i class="uil uil-globe"></i>
+                <p>Lcation</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="uil uil-map-pin"></i>
+                <p>Tour</p>
+            </div>
+            <div class="flex items-center gap-2">
+               <i class="uil uil-grin"></i>
+                <p> Activity</p>
+            </div>
+        </div>
+        <div class="flex gap-4 items-center">
+          <div  class="p-4  ">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="Where to next?">
+          </div>
+          <div>
+            <label for="activity">Activity</label>
+            <select id="activity">
+              <option>Select Activity</option>
+            </select>
+          </div>
+          <div>
+            <label for="tour-type">Tour Type</label>
+            <select id="tour-type">
+              <option>Select Type</option>
+            </select>
+          </div>
+          <button class="flex gap-4 items-center justify-center">  <i class="uil uil-search ml-4"></i> Plan A Trip</button>
+        </div>
+      </div>
+      <div class="section2">
+        <div class="w-full h-full bg-[#faf5ee] px-8 py-9">
+          <div class="flex justify-between items-center">
+              <div class="flex items-center gap-4">
+                <div class="bg-white p-7 rounded-full">
+                  <img src="/assets/ft4.webp" class="object-contain" alt="">
+                </div>
+                <div class="flex flex-col gap-2 items-start">
+                  <h1 class="text-black font-[600] text-2xl urban">Rafting Whitewater</h1>
+                  <p class="font-[300] urban text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, similique.</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="bg-white p-7 rounded-full">
+                  <img src="/assets/ft5.webp" class="object-contain" alt="">
+                </div>
+                <div class="flex flex-col gap-2 items-start">
+                  <h1 class="text-black font-[600] text-2xl urban">Easy and Quick Booking</h1>
+                  <p class="font-[300] urban text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, similique.</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="bg-white p-7 rounded-full">
+                  <img src="/assets/ft6.webp" class="object-contain" alt="">
+                </div>
+                <div class="flex flex-col gap-2 items-start">
+                  <h1 class="text-black font-[600] text-2xl urban">Planing assistant</h1>
+                  <p class="font-[300] urban text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, similique.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="section3 my-[5rem]">
+        <div style="display: grid; grid-template-columns: 1fr 1fr;" class="h-full w-full px-4   gap-8  items-center py-2">
+          <div class="relative    bg-white rounded-full shadow-lg">
+            <img src="/assets/ab3.webp" alt="Traveler" class="  object-contain travel rounded-full">
+            <div class="absolute -z-10 top-0 left-0 w-full h-full flex items-center justify-center">
+                <div class="absolute top-4 left-4   flex items-center justify-center icon">
+                    <img src="/assets/ab-v1.webp" alt="Cloud" class=" ">
+                </div>
+                <div class="absolute top-4 right-4 flex items-center justify-center icon">
+                    <img src="/assets/ab-v2.webp" alt="Hat" class=" ">
+                </div>
+                <div class="absolute bottom-4 right-4 after: flex items-center justify-center icon">
+                    <img src="/assets/ab-v4.webp" alt="Location" class=" ">
+                </div>
+            </div>
+        </div>
+        <div class="  ">
+
+          <div class="text-start px-4 flex  flex-col items-start ">
+              <h2 class="text-4xl  font-semibold mb-2 just ">Discover Your</h2>
+              <h1 class="text-5xl font-bold mb-4">Life is Short And The World is Wide!</h1>
+              <p class="text-gray-600 urban mb-8">Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris nullam the Lorem ipsum dolor sit amet consectetur adipiscing elit. consectetur adipiscing elit. Mauris nullam the Lorem ipsum dolor</p>
+              <a href="#" style="background: linear-gradient(90deg, rgb(67, 0, 231) 0%, rgb(125, 0, 252) 100%);" class=" text-white text-lg font-semibold py-3 px-6 rounded-full hover:bg-purple-700 transition duration-300">Start Booking</a>
+          </div>
+      
+      </div>
+        </div>
+      </div>
+      <!-- SECTION 4  -->
+      <div style="padding: 2rem 3rem;" class="bg-[#faf5ee] flex place-content-center w-screen h-screen py-12 px-12">
+        <div class="text-center place-content-center ">
+            <h2 style="font-size: 2rem;" class="text-6xl font-semibold  just mb-2">Discover Your</h2>
+            <h1 class="text-4xl font-bold mb-4">Most Favorite Tour Place</h1>
+            <div class="flex justify-center space-x-4">
+                <!-- First Destination -->
+                <div class="relative  hover-overlay rounded-full overflow-hidden">
+                  <img src="/assets/fp5.jpg" alt="Spain" class="w-full h-full  rounded-full object-cover">
+                  <div style="left:3rem; bottom: -3rem;"  class="absolute bottom-4 left-[3rem] transform -translate-x-1/2 text-center text-white z-20">
+                      <span  style="background: black;   color: white;" class=" bg-black text-xl  rounded-full px-4 py-2 ">8 Tour</span>
+                      <p style="font-size: 1.8rem; color: black; font-weight: 700;" class="mt-2 font-bold">Katy Line</p>
+                  </div>
+              </div>
+                <!-- Second Destination -->
+                <div class="relative  hover-overlay rounded-full overflow-hidden">
+                    <img src="/assets/fp2.jpg" alt="Spain" class="w-full h-full  rounded-full object-cover">
+                    <div style="left:3rem; bottom: -3rem;"  class="absolute bottom-4 left-[3rem] transform -translate-x-1/2 text-center text-white z-20">
+                        <span  style="background: black;   color: white;" class=" bg-black text-xl  rounded-full px-4 py-2 ">8 Tour</span>
+                        <p style="font-size: 1.8rem; color: black; font-weight: 700;" class="mt-2 font-bold">Spain</p>
+                    </div>
+                </div>
+                <!-- Third Destination -->
+                <div class="relative  hover-overlay rounded-full overflow-hidden">
+                  <img src="/assets/fp1.jpg" alt="Spain" class="w-full h-full  rounded-full object-cover">
+                  <div style="left:3rem; bottom: -3rem;"  class="absolute bottom-4 left-[3rem] transform -translate-x-1/2 text-center text-white z-20">
+                      <span  style="background: black;   color: white;" class=" bg-black text-xl  rounded-full px-4 py-2 ">8 Tour</span>
+                      <p style="font-size: 1.8rem; color: black; font-weight: 700;" class="mt-2 font-bold">Marhattan</p>
+                  </div>
+              </div>
+                <!-- Fourth Destination -->
+                <div class="relative  hover-overlay rounded-full overflow-hidden">
+                  <img src="/assets/fp4.jpg" alt="Spain" class="w-full h-full  rounded-full object-cover">
+                  <div style="left:3rem; bottom: -3rem;"  class="absolute bottom-4 left-[3rem] transform -translate-x-1/2 text-center text-white z-20">
+                      <span  style="background: black;   color: white;" class=" bg-black text-xl  rounded-full px-4 py-2 ">3 Tour</span>
+                      <p style="font-size: 1.8rem; color: black; font-weight: 700;" class="mt-2 font-bold">Pearland</p>
+                  </div>
+              </div>
+                <!-- Fifth Destination -->
+                <div class="relative  hover-overlay rounded-full overflow-hidden">
+                  <img src="/assets/fp3.jpg" alt="Spain" class="w-full h-full  rounded-full object-cover">
+                  <div style="left:3rem; bottom: -3rem;"  class="absolute bottom-4 left-[3rem] transform -translate-x-1/2 text-center text-white z-20">
+                      <span  style="background: black;   color: white;" class=" bg-black text-xl  rounded-full px-4 py-2 ">9 Tour</span>
+                      <p style="font-size: 1.8rem; color: black; font-weight: 700;" class="mt-2 font-bold">Bali Park</p>
+                  </div>
+              </div>
+            </div>
+        </div> 
+      </div>
+      <!-- SECTION 5 -->
+      <div class="container urban mx-auto p-4">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl just font-bold">Get To Know Us</h1>
+            <h2 class="text-2xl urban mt-2">Explore The World</h2>
+        </header>
+        <div class="filters text-center mb-8">
+            <button class="filter-btn bg-blue-500 text-white py-2 px-4 m-2 rounded" data-filter="all">All</button>
+            <button class="filter-btn bg-blue-500 text-white py-2 px-4 m-2 rounded" data-filter="luxury">Luxury</button>
+            <button class="filter-btn bg-blue-500 text-white py-2 px-4 m-2 rounded" data-filter="premium">Premium</button>
+            <button class="filter-btn bg-blue-500 text-white py-2 px-4 m-2 rounded" data-filter="standard">Standard</button>
+        </div>
+        <div class="section-5-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="card luxury border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:border-purple-500">
+                <div class="card-img relative h-64">
+                    <div class="location flex items-center absolute top-2 left-2 bg-gradient-to-r from-purple-700 to-purple-900 text-white px-2 py-1 rounded">
+                        <i class="uil uil-map-marker mr-1"></i> Italy
+                    </div>
+                    <img src="/assets/italy.webp" class="w-full h-full object-cover" alt="Luxury">
+                    <div class="absolute bottom-0 w-full bg-black bg-opacity-70 text-white font-semibold text-lg flex items-center justify-between px-4 py-2 rounded-b-lg">
+                        <p>96 days Trip</p>
+                        <p>Luxury</p>
+                    </div>
+                </div>
+                <div class="card-content p-4">
+                    <h3 class="text-xl font-bold">Rome, Italy</h3>
+                </div>
+                <div class="price flex justify-between items-center p-4">
+                    <div class="flex flex-col items-start">
+                        <p class="text-2xl font-bold">$83,000 Per Night</p>
+                    </div>
+                    <div>
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded">Explore Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card premium border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:border-purple-500">
+                <div class="card-img relative h-64">
+                    <div class="location flex items-center absolute top-2 left-2 bg-gradient-to-r from-purple-700 to-purple-900 text-white px-2 py-1 rounded">
+                        <i class="uil uil-map-marker mr-1"></i> France
+                    </div>
+                    <img src="/assets/paris.webp" class="w-full h-full object-cover" alt="Premium">
+                    <div class="absolute bottom-0 w-full bg-black bg-opacity-70 text-white font-semibold text-lg flex items-center justify-between px-4 py-2 rounded-b-lg">
+                        <p>192 days Trip</p>
+                        <p>Premium</p>
+                    </div>
+                </div>
+                <div class="card-content p-4">
+                    <h3 class="text-xl font-bold">Paris, France</h3>
+                </div>
+                <div class="price flex justify-between items-center p-4">
+                    <div class="flex flex-col items-start">
+                        <p class="text-2xl font-bold">$79,000 Per Night</p>
+                    </div>
+                    <div>
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded">Explore Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card standard border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:border-purple-500">
+                <div class="card-img relative h-64">
+                    <div class="location flex items-center absolute top-2 left-2 bg-gradient-to-r from-purple-700 to-purple-900 text-white px-2 py-1 rounded">
+                        <i class="uil uil-map-marker mr-1"></i> USA
+                    </div>
+                    <img src="/assets/usa.webp" class="w-full h-full object-cover" alt="Standard">
+                    <div class="absolute bottom-0 w-full bg-black bg-opacity-70 text-white font-semibold text-lg flex items-center justify-between px-4 py-2 rounded-b-lg">
+                        <p>168 days Trip</p>
+                        <p>Standard</p>
+                    </div>
+                </div>
+                <div class="card-content p-4">
+                    <h3 class="text-xl font-bold">New York, USA</h3>
+                </div>
+                <div class="price flex justify-between items-center p-4">
+                    <div class="flex flex-col items-start">
+                        <p class="text-2xl font-bold">$90,000 Per Night</p>
+                    </div>
+                    <div>
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded">Explore Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card luxury border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:border-purple-500">
+                <div class="card-img relative h-64">
+                    <div class="location flex items-center absolute top-2 left-2 bg-gradient-to-r from-purple-700 to-purple-900 text-white px-2 py-1 rounded">
+                        <i class="uil uil-map-marker mr-1"></i> Emirates
+                    </div>
+                    <img src="/assets/dubai.webp" class="w-full h-full object-cover" alt="Luxury">
+                    <div class="absolute bottom-0 w-full bg-black bg-opacity-70 text-white font-semibold text-lg flex items-center justify-between px-4 py-2 rounded-b-lg">
+                        <p>312 days Trip</p>
+                        <p>Luxury</p>
+                    </div>
+                </div>
+                <div class="card-content p-4">
+                    <h3 class="text-xl font-bold">Dubai, Emirates</h3>
+                </div>
+                <div class="price flex justify-between items-center p-4">
+                    <div class="flex flex-col items-start">
+                        <p class="text-2xl font-bold">$56,000 Per Night</p>
+                    </div>
+                    <div>
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded">Explore Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card premium luxury border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:border-purple-500">
+                <div class="card-img relative h-64">
+                    <div class="location flex items-center absolute top-2 left-2 bg-gradient-to-r from-purple-700 to-purple-900 text-white px-2 py-1 rounded">
+                        <i class="uil uil-map-marker mr-1"></i> Canada
+                    </div>
+                    <img src="/assets/canada.webp" class="w-full h-full object-cover" alt="Premium Luxury">
+                    <div class="absolute bottom-0 w-full bg-black bg-opacity-70 text-white font-semibold text-lg flex items-center justify-between px-4 py-2 rounded-b-lg">
+                        <p class="">240 days Trip</p>
+                        <p>Premium Luxury</p>
+                    </div>
+                </div>
+                <div class="card-content p-4">
+                    <h3 class="text-xl font-bold">Toronto, Canada</h3>
+                </div>
+                <div class="price flex justify-between items-center p-4">
+                    <div class="flex flex-col items-start">
+                        <p class="text-2xl font-bold">$89,000 Per Night</p>
+                    </div>
+                    <div>
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded">Explore Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card luxury premium border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:border-purple-500">
+                <div class="card-img relative h-64">
+                    <div class="location flex items-center absolute top-2 left-2 bg-gradient-to-r from-purple-700 to-purple-900 text-white px-2 py-1 rounded">
+                        <i class="uil uil-map-marker mr-1"></i> Indonesia
+                    </div>
+                    <img src="/assets/indinosia.webp" class="w-full h-full object-cover" alt="Luxury Premium">
+                    <div class="absolute bottom-0 w-full bg-black bg-opacity-70 text-white font-semibold text-lg flex items-center justify-between px-4 py-2 rounded-b-lg">
+                        <p>144 days Trip</p>
+                        <p>Luxury Premium</p>
+                    </div>
+                </div>
+                <div class="card-content p-4">
+                    <h3 class="text-xl font-bold">Bali, Indonesia</h3>
+                </div>
+                <div class="price flex justify-between items-center p-4">
+                    <div class="flex flex-col items-start">
+                        <p class="text-2xl font-bold">$25,000 Per Night</p>
+                    </div>
+                    <div>
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded">Explore Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
- </body>
+    <!-- SECTION 6 -->
+    <div class="custom-bg bg-gray-900 urban text-white font-sans h-screen overflow-x-hidden">
+      <div class="relative max-w-screen-xl mx-auto px-4 py-12 flex flex-col justify-center items-start h-full">
+          <div class="relative z-10 max-w-lg">
+              <h1 class="text-4xl font-bold mb-2 just ">Discover Your</h1>
+              <h2 class="text-5xl font-bold text-indigo-500 mb-4">Start your Journey with a Single</h2>
+              <p class="text-gray-400 mb-8">There are many variations of passages of Lorem Ipsum simply free text available, but the majority. There are many variations of passages of Lorem</p>
+              <div class="flex flex-col gap-4 items-start justify-center   mb-8">
+                  <div class="  flex gap-4 items-center">
+                    <i class="uil uil-check rounded-full p-2 bg-indigo-700 text-black"></i>
+                      Generation Technology
+                  </div>
+                  <div class=" flex gap-4 items-center">
+                    <i class="uil uil-check rounded-full p-2 bg-indigo-700 text-black"></i>
+                      Audio Performance
+                  </div>
+              </div>
+              <div  style="background: linear-gradient(90deg, rgb(67, 0, 231) 0%, rgb(125, 0, 252) 100%) ;" class="rounded justify-between  flex py-3 px-6">
+                <a href="#" class="  text-white font-bold  ">Start Booking</a>
+                <i class="uil uil-arrow-circle-right text-2xl"></i>
+              </div>
+          </div>
+          <div class="absolute right-0 top-0 w-[44%] transform translate-x-24">
+              <img src="/assets/wc5.webp" alt="Suitcase Image" class="rounded-lg  object-contain   h-[40%] shadow-lg">
+          </div>
+          <div class="absolute right-[8rem]  w-[40%] top-[5rem] bottom-0 transform translate-x-24">
+              <img src="/assets/wc6.webp" alt="St. Basil's Cathedral" class="rounded-lg  object-contain shadow-lg">
+          </div>
+      </div>
+  </div>
+     <!-- SECTION 7 -->
+     <div class="bg-white urban text-gray-800 font-sans h-screen flex items-center justify-center">
+         <div class="container mx-auto px-4 flex items-center justify-between">
+             <div class="relative">
+                 <img src="/assets/ft3-1.webp" alt="Suitcase Image" class="w-full max-w-sm">
+             </div>
+             <div class="max-w-lg ml-10">
+                 <h1 class="text-2xl font-bold mb-2">Explore Event</h1>
+                 <h2 class="text-4xl font-bold text-indigo-500 mb-4">Breathtaking Cities</h2>
+                 <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris nullam the Lorem ipsum dolor sit amet consectetur adipiscing elit consectetur adipiscing elit.</p>
+                 <div class="grid grid-cols-2 gap-4 mb-6">
+                     <div class="flex items-center space-x-2">
+                         <svg class="h-6 w-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                             <circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle>
+                         </svg>
+                         <span>Unlimited Fonts</span>
+                     </div>
+                     <div class="flex items-center space-x-2">
+                         <svg class="h-6 w-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                             <circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle>
+                         </svg>
+                         <span>Unlimited Fonts</span>
+                     </div>
+                     <div class="flex items-center space-x-2">
+                         <svg class="h-6 w-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                             <circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle>
+                         </svg>
+                         <span>Free Fixes & Updates</span>
+                     </div>
+                     <div class="flex items-center space-x-2">
+                         <svg class="h-6 w-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                             <circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle>
+                         </svg>
+                         <span>Free Fixes & Updates</span>
+                     </div>
+                 </div>
+                 <a href="#" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full">Start Booking</a>
+             </div>
+         </div>
+     </div> 
+     <!-- SECTION 8 -->
+     <div class="bg-white text-gray-800 font-sans h-screen flex items-center justify-center">
+      <div class="relative bg-custom w-full h-full flex items-center justify-between px-20">
+          <div class="max-w-md flex flex-col gap-4 items-start z-10">
+              <h1 class="text-xl font-bold mb-2">Go & Discover</h1>
+              <h2 class="text-4xl font-bold text-indigo-500 mb-4">Get Special Offer</h2>
+              <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris nullam the Lorem ipsum dolor sit amet.</p>
+              <a href="#" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full mb-4">Start Booking</a>
+  
+          </div>
+          <div class="flex gap-4">
+            <div class="max-w-lg z-10 flex flex-col items-center">
+                <h2 class="text-6xl font-extrabold text-black mb-2">35%</h2>
+                <span class="text-2xl font-bold text-black">OFF</span>
+            </div>
+            <div class="space-y-2">
+              <div class="flex items-center space-x-2">
+                  <svg class="h-6 w-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle>
+                  </svg>
+                  <span>Unlimited Fonts</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                  <svg class="h-6 w-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle>
+                  </svg>
+                  <span>Free Fixes & Updates</span>
+              </div>
+          </div>
+
+          </div>
+          <div class="absolute right-[11rem] bottom-[-1rem] transform translate-y-24 z-0">
+              <img src="/assets/dis1.webp" alt="Woman with Suitcase" class="">
+          </div>
+      </div>
+  </div>
+  
+    </div>
+  </div>
+  <script>
+    var typed = new Typed(".typing", {
+      strings: ["Adventure", "Destination", "Tour"],
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true,
+    }); 
+        ScrollReveal().reveal('.icon', {
+            distance: '50px',
+            origin: 'bottom',
+            interval: 200,
+            afterReveal: function(el) {
+                el.classList.add('reveal-icon');
+            }
+        });   
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.cards');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+
+            cards.forEach(card => {
+                if (filter === 'all') {
+                    card.classList.remove('hidden');
+                } else if (card.classList.contains(filter)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+});
+
+        </script>
+</body>
 </html>
