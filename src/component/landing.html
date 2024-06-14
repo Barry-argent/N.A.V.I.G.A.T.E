@@ -95,7 +95,10 @@
       border-radius: 9999px;
       color: white;
     }
-    
+    .gradient{
+      background:  linear-gradient(90deg, rgb(67, 0, 231) 0%, rgb(125, 0, 252) 100%);
+      ;
+    }
     .main-content {
       position: relative;
       display: flex; 
@@ -217,6 +220,78 @@
             background-size: cover;
             background-position: center;
         }
+        .quote-mark {
+            font-size: 5rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .profile-image {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .small-image {
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        .thumbnail {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+        .scroll-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        white-space: nowrap;
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .scroll-container::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
+    }
+    .scroll-item {
+        flex: none;
+        scroll-snap-align: start;
+        width: 20rem;
+        height: 20rem;
+    }
+    .arrow-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        background-color: rgba(255, 255, 255, 0.7);
+        border: none;
+        border-radius: 50%;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    .left-button {
+        left: 10px;
+    }
+    .right-button {
+        right: 10px;
+    }
+    .faq-content {
+            display: none;
+        }
+        .faq-head {
+            cursor: pointer;
+        }
 
   </style>
   
@@ -234,7 +309,7 @@
           <div class="dropdown-content">
             <a href="#">Home</a>
             <a href="#">About</a>
-            <a href="#">Toure</a>
+            <a href="#">Tour</a>
             <a href="#">Pages</a>
             <a href="#">Blog</a>
           </div>
@@ -419,7 +494,7 @@
             <!-- Card 1 -->
             <div class="card luxury border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:border-purple-500">
                 <div class="card-img relative h-64">
-                    <div class="location flex items-center absolute top-2 left-2 bg-gradient-to-r from-purple-700 to-purple-900 text-white px-2 py-1 rounded">
+                    <div class="location flex items-center absolute top-2 left-2 gradient-to-r from-purple-700 to-purple-900 text-white px-2 py-1 rounded">
                         <i class="uil uil-map-marker mr-1"></i> Italy
                     </div>
                     <img src="/assets/italy.webp" class="w-full h-full object-cover" alt="Luxury">
@@ -443,7 +518,7 @@
             <!-- Card 2 -->
             <div class="card premium border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:border-purple-500">
                 <div class="card-img relative h-64">
-                    <div class="location flex items-center absolute top-2 left-2 bg-gradient-to-r from-purple-700 to-purple-900 text-white px-2 py-1 rounded">
+                    <div class="location flex items-center absolute top-2 left-2 gradient-to-r from-purple-700 to-purple-900 text-white px-2 py-1 rounded">
                         <i class="uil uil-map-marker mr-1"></i> France
                     </div>
                     <img src="/assets/paris.webp" class="w-full h-full object-cover" alt="Premium">
@@ -632,7 +707,7 @@
                          <span>Free Fixes & Updates</span>
                      </div>
                  </div>
-                 <a href="#" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full">Start Booking</a>
+                 <a href="#" class="bg-gradient hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full">Start Booking</a>
              </div>
          </div>
      </div> 
@@ -643,7 +718,7 @@
               <h1 class="text-xl font-bold mb-2">Go & Discover</h1>
               <h2 class="text-4xl font-bold text-indigo-500 mb-4">Get Special Offer</h2>
               <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris nullam the Lorem ipsum dolor sit amet.</p>
-              <a href="#" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full mb-4">Start Booking</a>
+              <a href="#" class="bg-gradient hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full mb-4">Start Booking</a>
   
           </div>
           <div class="flex gap-4">
@@ -673,8 +748,280 @@
               <img src="/assets/dis1.webp" alt="Woman with Suitcase" class="">
           </div>
       </div>
-  </div>
-  
+    </div>
+    <!-- SECTION 9 -->
+    <div class="bg-white text-gray-800 font-sans h-screen flex items-center justify-center">
+      <div class="container mx-auto px-4 flex items-center justify-center">
+          <div class="relative flex items-start space-x-10">
+              <div class="flex flex-col items-center">
+                  <div class="profile-image">
+                      <img src="/assets/testi1.webp" alt="Profile Image" id="mainImage" class="w-full h-full object-cover">
+                      <img src="/assets/tst-v.webp" alt="Small Image" class="small-image object-cover">
+                  </div>
+                  <h3 class="text-lg font-bold mt-4" id="mainName">Victoria Wotton</h3>
+                  <p class="text-gray-500" id="mainTitle">Fermentum Odio Co.</p>
+              </div>
+              <div class="max-w-lg">
+                  <div class="quote-mark text-indigo-500 mb-2">&ldquo;</div>
+                  <p class="text-gray-600 mb-4">Since 1985 Reed pioneered trecruitment, Sourcing knowledgeable, skilled professionals pioneered Specialist recruitment, sourcing. pioneered trecruitment, Sourcing</p>
+                  <div class="flex  space-x-4">
+                      <img src="/assets/testi1.webp" alt="Other Profile 1" class="w-12 h-12 object-contain rounded-full border-2 border-red-500 thumbnail" onclick="changeProfile('/assets/testi1.webp', 'Victoria Wotton', 'Fermentum Odio Co.')">
+                      <img src="/assets/testi2.webp" alt="Other Profile 2" class="w-12 h-12 object-contain rounded-full thumbnail" onclick="changeProfile('/assets/testi2.webp', 'Jane Smith', 'Company B')">
+                      <img src="/assets/testi3.webp" alt="Other Profile 3" class="w-12 h-12 object-contain rounded-full thumbnail" onclick="changeProfile('/assets/testi3.webp', 'Emily Johnson', 'Company C')">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- SECTION 10 -->
+    <div class="bg-white text-gray-800 font-sans">
+
+      <!-- Main Container -->
+      <div class="container mx-auto px-4 py-8">
+          <!-- Header -->
+          <div class="text-center urban mb-8">
+              <h2 class="text-3xl just  font-bold">Get Ready For New Experience</h2>
+              <h3 class="text-2xl font-semibold mt-2">Most Favorite Videos</h3>
+          </div>
+          
+          <!-- Scrollable Section -->
+          <div class="relative">
+              <!-- Left Arrow Button -->
+              <i class="uil uil-arrow-circle-left  bg-white text-black text-xl arrow-button left-button"></i>
+              
+              <!-- Scrollable Content -->
+              <div class="scroll-container space-x-4">
+                <div class="scroll-item w-80 h-80 rounded-lg shadow-lg">
+                    <img src="/assets/v-ex1.webp" alt="Video 1" class="w-full h-full object-cover rounded-lg">
+                </div>
+                <div class="scroll-item w-80 h-80 rounded-lg shadow-lg">
+                    <img src="/assets/v-ex2.webp" alt="Video 2" class="w-full h-full object-cover rounded-lg">
+                </div>
+                <div class="scroll-item w-80 h-80 rounded-lg shadow-lg">
+                    <img src="/assets/v-ex3.webp" alt="Video 3" class="w-full h-full object-cover rounded-lg">
+                </div>
+                <div class="scroll-item w-80 h-80 rounded-lg shadow-lg">
+                    <img src="/assets/v-ex4.webp" alt="Video 4" class="w-full h-full object-cover rounded-lg">
+                </div>
+              </div>
+              
+              <!-- Right Arrow Button -->
+              <i class="uil uil-arrow-circle-right arrow-button  text-white  bg-violet-600 text-xl right-button"></i>
+          </div>
+    
+          <!-- Features Section -->
+          <div class="mt-8 bg-[#faf5ee] grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+              <div class="p-4">
+                  <img src="/assets/ft4.webp" alt="Icon 1" class="mx-auto mb-2 w-12 h-12">
+                  <h4 class="text-xl font-bold">Popular Destination</h4>
+                  <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris nullam the</p>
+              </div>
+              <div class="p-4">
+                  <img src="/assets/ft6.webp" alt="Icon 2" class="mx-auto mb-2 w-12 h-12">
+                  <h4 class="text-xl font-bold">Enjoy The Travelling</h4>
+                  <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris nullam the</p>
+              </div>
+              <div class="p-4">
+                  <img src="/assets/ft5.webp" alt="Icon 3" class="mx-auto mb-2 w-12 h-12">
+                  <h4 class="text-xl font-bold">Hassle - Free</h4>
+                  <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris nullam the</p>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- SECTION 11 -->
+    <div class="max-w-6xl mx-auto py-12 space-y-8">
+      <!-- First Post -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row">
+          <img class="w-full md:w-1/2 h-48 md:h-auto object-cover" src="/assets/blog-2-620x377.webp" alt="City Image">
+          <div class="p-6 flex flex-col justify-between">
+              <div>
+                  <div class="flex items-center mb-4">
+                      <div class="gradient text-white py-1 px-3 rounded-full text-xs font-bold">18 MAR</div>
+                  </div>
+                  <div style="background:#b0cdf8 ; border-radius: 40px;"  class="flex items-center   px-4 py-2 bg-[#b0cdf8] rounded-[40px] font-semibold mb-4">
+                      <div class="text-gray-500 text-sm">by Emma Mark</div>
+                      <div class="mx-2 text-gray-500">|</div>
+                      <div class="text-gray-500 text-sm"><i class="uil uil-comment"></i> 1 Comments</div>
+                  </div>
+                  <h2 class="text-2xl font-bold mb-2">Beach Days, Long Hikes, And</h2>
+                  <p class="text-gray-700 mb-4">Non libero hac commodo torquent finibus metus. Duis in nisi diam nunc habitasse lorem elit. Ante porta accumsan sociosqu faucibus</p>
+              </div>
+              <a href="#" class="text-white gradient hover:bg-purple-700 px-4 py-2 rounded-full self-start">Read more</a>
+          </div>
+      </div>
+      <!-- Second Post -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col-reverse md:flex-row-reverse">
+          <img class="w-full md:w-1/2 h-48 md:h-auto object-cover" src="/assets/blog-3-620x377.webp" alt="Island Image">
+          <div class="p-6 flex flex-col justify-between">
+              <div>
+                  <div class="flex items-center mb-4">
+                      <div class="gradient text-white py-1 px-3 rounded-full text-xs font-bold">28 MAR</div>
+                  </div>
+                  <div style="background:#b0cdf8 ; border-radius: 40px;" class="flex items-center bg-[#b0cdf8] rounded-[40px] px-4 py-2 font-semibold mb-4">
+                      <div class="text-gray-500 text-sm">by Emma Mark</div>
+                      <div class="mx-2 text-gray-500">|</div>
+                      <div class="text-gray-500 text-sm"><i class="uil uil-comment"></i> 0 Comments</div>
+                  </div>
+                  <h2 class="text-2xl font-bold mb-2">Island Hopping And Weather Tips</h2>
+                  <p class="text-gray-700 mb-4">Non libero hac commodo torquent finibus metus. Duis in nisi diam nunc habitasse lorem elit. Ante porta accumsan sociosqu faucibus</p>
+              </div>
+              <a href="#" class="text-white gradient hover:bg-purple-700 px-4 py-2 rounded-full self-start">Read more</a>
+          </div>
+      </div>
+    </div>  
+    <!-- SECTION 12 -->
+    <div class="max-w-7xl mx-auto py-12 shadow-xl md:flex md:justify-between md:items-center">
+      <!-- FAQ Section -->
+      <div class="w-full md:w-1/2 px-8 py-2 bg-white rounded-lg flex flex-col items-center">
+        <div class="faq-container w-full">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item mb-4">
+            <div class="faq-head flex justify-between items-center" onclick="toggleFaq(this)">
+              <h2 class="text-xl font-bold">Deliver Business Solutions</h2>
+              <i class="uil uil-plus"></i>
+              <i class="uil uil-minus hidden"></i>
+            </div>
+            <div class="faq-content mt-4">
+              <div class="flex items-center gap-4">
+                <img src="/assets/fq1.webp" alt="Business Image" class="rounded-lg w-24">
+                <div>
+                  <p class="text-gray-700 mb-2">Every pleasure is to be welcomed and every pain</p>
+                  <ul class="font-bold list-none list-inside">
+                    <li class="flex items-center"><i class="uil uil-arrow-right mr-2"></i>Investment Strategy</li>
+                    <li class="flex items-center"><i class="uil uil-arrow-right mr-2"></i>Risk Management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FAQ Item 2 -->
+          <div class="faq-item mb-4">
+            <div class="faq-head flex justify-between items-center" onclick="toggleFaq(this)">
+              <h2 class="text-xl font-bold">Extra Benefit Through Invest Certified Company</h2>
+              <i class="uil uil-plus"></i>
+              <i class="uil uil-minus hidden"></i>
+            </div>
+            <div class="faq-content mt-4">
+              <div class="flex items-center gap-4">
+                <img src="/assets/fq1.webp" alt="Business Image" class="rounded-lg w-24">
+                <div>
+                  <p class="text-gray-700 mb-2">Every pleasure is to be welcomed and every pain</p>
+                  <ul class="font-bold list-none list-inside">
+                    <li class="flex items-center"><i class="uil uil-arrow-right mr-2"></i>Investment Strategy</li>
+                    <li class="flex items-center"><i class="uil uil-arrow-right mr-2"></i>Risk Management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <div class="faq-head flex justify-between items-center" onclick="toggleFaq(this)">
+              <h2 class="text-xl font-bold">Our Business Shaped Solutions</h2>
+              <i class="uil uil-plus"></i>
+              <i class="uil uil-minus hidden"></i>
+            </div>
+            <div class="faq-content mt-4">
+              <div class="flex items-center gap-4">
+                <img src="/assets/fq1.webp" alt="Business Image" class="rounded-lg w-24">
+                <div>
+                  <p class="text-gray-700 mb-2">Every pleasure is to be welcomed and every pain</p>
+                  <ul class="font-bold list-none list-inside">
+                    <li class="flex items-center"><i class="uil uil-arrow-right mr-2"></i>Investment Strategy</li>
+                    <li class="flex items-center"><i class="uil uil-arrow-right mr-2"></i>Risk Management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Form -->
+      <div class="w-full md:w-1/2 gradient p-8 text-white">
+        <h2 class="text-2xl font-bold mb-8">✨ Contact Us</h2>
+        <h3 class="text-3xl font-bold mb-4">Keep In Touch</h3>
+        <form class="space-y-4">
+          <div class="grid grid-cols-2 gap-4">
+            <input type="text" placeholder="First Name" class="w-full px-4 py-2 border-b-2 border-white bg-transparent text-white focus:outline-none focus:border-purple-500">
+            <input type="text" placeholder="How Can I Help you?" class="w-full px-4 py-2 border-b-2 border-white bg-transparent text-white focus:outline-none focus:border-purple-500">
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border-b-2 border-white bg-transparent text-white focus:outline-none focus:border-purple-500">
+            <input type="text" placeholder="Mobile Number" class="w-full px-4 py-2 border-b-2 border-white bg-transparent text-white focus:outline-none focus:border-purple-500">
+          </div>
+          <textarea placeholder="Your Messages" class="w-full px-4 py-2 border-b-2 border-white bg-transparent text-white focus:outline-none focus:border-purple-500"></textarea>
+          <button type="submit" class="w-full bg-black text-white py-2 rounded-md">Booking</button>
+        </form>
+      </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="bg-black text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+        <div class="flex flex-wrap justify-between">
+          <div class="w-full md:w-1/3 mb-8 md:mb-0">
+            <h2 class="text-2xl font-bold mb-4">Goyto.</h2>
+            <p class="text-gray-400 mb-4">Made using clean, non-toxic ingredients, our products are signed for everyone. Made using clean, non-toxic ingredients, our products are signed.</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white"><i class="fab fa-facebook-f"></i> FACEBOOK</a>
+              <a href="#" class="text-white"><i class="fab fa-instagram"></i> INSTAGRAM</a>
+            </div>
+          </div>
+          <div class="w-full md:w-2/3">
+            <div class="flex flex-wrap justify-between">
+              <div class="w-full sm:w-1/2 md:w-1/4 mb-8 sm:mb-0">
+                <h3 class="font-bold mb-4">Recent Work</h3>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-gray-400">Product Gallery</a></li>
+                  <li><a href="#" class="text-gray-400">About us</a></li>
+                  <li><a href="#" class="text-gray-400">Product Gallery</a></li>
+                </ul>
+              </div>
+              <div class="w-full sm:w-1/2 md:w-1/4 mb-8 sm:mb-0">
+                <h3 class="font-bold mb-4">Branding</h3>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-gray-400">Web & Interactive</a></li>
+                  <li><a href="#" class="text-gray-400">Branded Merchandise</a></li>
+                  <li><a href="#" class="text-gray-400">Web & Interactive</a></li>
+                </ul>
+              </div>
+              <div class="w-full sm:w-1/2 md:w-1/4 mb-8 sm:mb-0">
+                <h3 class="font-bold mb-4">Our History</h3>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-gray-400">Help & support</a></li>
+                  <li><a href="#" class="text-gray-400">Our Awards</a></li>
+                  <li><a href="#" class="text-gray-400">Help & support</a></li>
+                </ul>
+              </div>
+              <div class="w-full sm:w-1/2 md:w-1/4 mb-8 sm:mb-0">
+                <h3 class="font-bold mb-4">Newsletter</h3>
+                <form class="space-y-4">
+                  <input type="email" placeholder="Enter your email address" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                  <button type="submit" class="w-full text-white bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-md">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-between items-center mt-12">
+          <div class="w-full md:w-auto mb-4 md:mb-0">
+            <p class="text-gray-400">© Copyright 2024. All Rights Reserved.</p>
+          </div>
+          <div class="w-full md:w-auto flex space-x-4 items-center">
+            <div class="flex space-x-4">
+              <img src="https://via.placeholder.com/50" alt="Gallery Image 1" class="w-12 h-12 object-cover rounded-md">
+              <img src="https://via.placeholder.com/50" alt="Gallery Image 2" class="w-12 h-12 object-cover rounded-md">
+              <img src="https://via.placeholder.com/50" alt="Gallery Image 3" class="w-12 h-12 object-cover rounded-md">
+            </div>
+            <div>
+              <p class="text-gray-400">(021) 666 888 0000</p>
+              <p class="text-gray-400">needhelp@company.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
     </div>
   </div>
   <script>
@@ -713,7 +1060,58 @@
         });
     });
 });
+function changeProfile(imageSrc, name, title) {
+            document.getElementById('mainImage').src = imageSrc;
+            document.getElementById('mainName').textContent = name;
+            document.getElementById('mainTitle').textContent = title;
+        }
+        
+        function scrollLeft() {
+        const container = document.getElementById('scrollContainer');
+        const scrollWidth = container.scrollWidth / 2;
+        container.scrollBy({
+            left: -scrollWidth / 4,
+            behavior: 'smooth'
+        });
+        if (container.scrollLeft <= 0) {
+            container.scrollLeft = scrollWidth;
+        }
+    }
 
-        </script>
+    function scrollRight() {
+        const container = document.getElementById('scrollContainer');
+        const scrollWidth = container.scrollWidth / 2;
+        container.scrollBy({
+            left: scrollWidth / 4,
+            behavior: 'smooth'
+        });
+        if (container.scrollLeft >= scrollWidth) {
+            container.scrollLeft = 0;
+        }
+    }
+    function toggleFaq(element) {
+            const faqContent = element.nextElementSibling;
+            const plusIcon = element.querySelector('.uil-plus');
+            const minusIcon = element.querySelector('.uil-minus');
+
+            if (faqContent.style.display === 'none' || faqContent.style.display === '') {
+                // Close all FAQ items
+                document.querySelectorAll('.faq-content').forEach(content => content.style.display = 'none');
+                document.querySelectorAll('.faq-head .uil-minus').forEach(icon => icon.classList.add('hidden'));
+                document.querySelectorAll('.faq-head .uil-plus').forEach(icon => icon.classList.remove('hidden'));
+                
+                // Open the clicked FAQ item
+                faqContent.style.display = 'block';
+                plusIcon.classList.add('hidden');
+                minusIcon.classList.remove('hidden');
+            } else {
+                // Close the clicked FAQ item
+                faqContent.style.display = 'none';
+                plusIcon.classList.remove('hidden');
+                minusIcon.classList.add('hidden');
+            }
+        }
+ </script>
+
 </body>
 </html>
