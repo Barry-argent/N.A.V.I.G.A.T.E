@@ -5,3 +5,16 @@
 .header{
     @apply opacity-0 translate-y-8 transition-all duration-500 delay-[2200ms]
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in;
+}

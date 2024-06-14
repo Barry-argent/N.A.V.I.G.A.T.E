@@ -18,7 +18,6 @@
       }
       
     a:hover {
-      font-size: 2rem;
       transition: all 1s linear;
     }
     
@@ -38,7 +37,7 @@
       width: 0%;
       margin-top: 5px;
       height: 5px;
-      background: linear-gradient(90deg, rgb(67, 0, 231) 0%, rgb(125, 0, 252) 100%);
+      background: linear-gradient(90deg, rgb(100, 0, 150) 0%, rgb(180, 0, 120) 100%);;
       bottom: 0;
       left: 0;
       animation: fadeout linear 2s;
@@ -88,7 +87,7 @@
     }
     
     .talk {
-      background: linear-gradient(90deg, rgb(67, 0, 231) 0%, rgb(125, 0, 252) 100%);
+      background: linear-gradient(90deg, rgb(100, 0, 150) 0%, rgb(180, 0, 120) 100%);;
       display: flex;
       align-items: center;
       padding: 1rem 1.5rem;
@@ -96,7 +95,7 @@
       color: white;
     }
     .gradient{
-      background:  linear-gradient(90deg, rgb(67, 0, 231) 0%, rgb(125, 0, 252) 100%);
+      background:  linear-gradient(90deg, rgb(100, 0, 150) 0%, rgb(180, 0, 120) 100%);;
       ;
     }
     .main-content {
@@ -159,7 +158,7 @@
     }
     
     .search-bar button {
-      background: linear-gradient(90deg, rgb(67, 0, 231) 0%, rgb(125, 0, 252) 100%);
+      background: linear-gradient(90deg, rgb(100, 0, 150) 0%, rgb(180, 0, 120) 100%);;
       color: white;
       padding: 0.5rem 1rem;
       border: none;
@@ -294,7 +293,6 @@
         }
 
   </style>
-  
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
 </head>
@@ -303,15 +301,14 @@
     <div class="overlay">
       <nav>
         <div class="logo ">
-          <img src="/assets/logo.png" alt="Logo">
+          <a href="/index.html"><img src="/assets/logo.png" alt="Logo"></a>
         </div>
         <div class="dropdown">
           <div class="dropdown-content">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Tour</a>
-            <a href="#">Pages</a>
-            <a href="#">Blog</a>
+            <a href="../component/landing.html">Home</a>
+            <a href="./pages/">About</a>
+            <a href="./pages/dubia.html">Tour</a> 
+            <a href="./pages/blog.html">Blog</a>
           </div>
         </div>
         <div class="talk">
@@ -334,7 +331,7 @@
         </div>
       </div>
       <div class="search-bar absolute ">
-        <div style="background: linear-gradient( 90deg, rgb(67,0,231) 0%, rgb(125,0,252) 100%); top: -3rem; left: 3rem;" class="absolute text-white font-semibold rounded-full flex item-center gap-4 p-4">
+        <div style="background: linear-gradient(90deg, rgb(100, 0, 150) 0%, rgb(180, 0, 120) 100%); top: -3rem; left: 3rem;" class="absolute text-white font-semibold rounded-full flex item-center gap-4 p-4">
             <div class="flex items-center gap-2">
                <i class="uil uil-globe"></i>
                 <p>Lcation</p>
@@ -423,7 +420,7 @@
               <h2 class="text-4xl  font-semibold mb-2 just ">Discover Your</h2>
               <h1 class="text-5xl font-bold mb-4">Life is Short And The World is Wide!</h1>
               <p class="text-gray-600 urban mb-8">Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris nullam the Lorem ipsum dolor sit amet consectetur adipiscing elit. consectetur adipiscing elit. Mauris nullam the Lorem ipsum dolor</p>
-              <a href="#" style="background: linear-gradient(90deg, rgb(67, 0, 231) 0%, rgb(125, 0, 252) 100%);" class=" text-white text-lg font-semibold py-3 px-6 rounded-full hover:bg-purple-700 transition duration-300">Start Booking</a>
+              <a href="#" style="background: linear-gradient(90deg, rgb(100, 0, 150) 0%, rgb(180, 0, 120) 100%);;" class=" text-white text-lg font-semibold py-3 px-6 rounded-full hover:bg-purple-700 transition duration-300">Start Booking</a>
           </div>
       
       </div>
@@ -485,16 +482,16 @@
             <h2 class="text-2xl urban mt-2">Explore The World</h2>
         </header>
         <div class="filters text-center mb-8">
-            <button class="filter-btn bg-blue-500 text-white py-2 px-4 m-2 rounded" data-filter="all">All</button>
-            <button class="filter-btn bg-blue-500 text-white py-2 px-4 m-2 rounded" data-filter="luxury">Luxury</button>
-            <button class="filter-btn bg-blue-500 text-white py-2 px-4 m-2 rounded" data-filter="premium">Premium</button>
-            <button class="filter-btn bg-blue-500 text-white py-2 px-4 m-2 rounded" data-filter="standard">Standard</button>
+            <button class="filter-btn bg-violet-500 text-white py-2 px-4 m-2 rounded" data-filter="all">All</button>
+            <button class="filter-btn bg-violet-500 text-white py-2 px-4 m-2 rounded" data-filter="luxury">Luxury</button>
+            <button class="filter-btn bg-violet-500 text-white py-2 px-4 m-2 rounded" data-filter="premium">Premium</button>
+            <button class="filter-btn bg-violet-500 text-white py-2 px-4 m-2 rounded" data-filter="standard">Standard</button>
         </div>
         <div class="section-5-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Card 1 -->
             <div class="card luxury border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:border-purple-500">
                 <div class="card-img relative h-64">
-                    <div class="location flex items-center absolute top-2 left-2 gradient-to-r from-purple-700 to-purple-900 text-white px-2 py-1 rounded">
+                    <div class="location flex items-center absolute top-2 left-2  gradient text-white px-2 py-1 rounded">
                         <i class="uil uil-map-marker mr-1"></i> Italy
                     </div>
                     <img src="/assets/italy.webp" class="w-full h-full object-cover" alt="Luxury">
@@ -518,7 +515,7 @@
             <!-- Card 2 -->
             <div class="card premium border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:border-purple-500">
                 <div class="card-img relative h-64">
-                    <div class="location flex items-center absolute top-2 left-2 gradient-to-r from-purple-700 to-purple-900 text-white px-2 py-1 rounded">
+                    <div class="location flex items-center absolute top-2 left-2  gradient text-white px-2 py-1 rounded">
                         <i class="uil uil-map-marker mr-1"></i> France
                     </div>
                     <img src="/assets/paris.webp" class="w-full h-full object-cover" alt="Premium">
@@ -654,7 +651,7 @@
                       Audio Performance
                   </div>
               </div>
-              <div  style="background: linear-gradient(90deg, rgb(67, 0, 231) 0%, rgb(125, 0, 252) 100%) ;" class="rounded justify-between  flex py-3 px-6">
+              <div  style="background: linear-gradient(90deg, rgb(100, 0, 150) 0%, rgb(180, 0, 120) 100%); ;" class="rounded justify-between  flex py-3 px-6">
                 <a href="#" class="  text-white font-bold  ">Start Booking</a>
                 <i class="uil uil-arrow-circle-right text-2xl"></i>
               </div>
@@ -960,7 +957,7 @@
       <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
         <div class="flex flex-wrap justify-between">
           <div class="w-full md:w-1/3 mb-8 md:mb-0">
-            <h2 class="text-2xl font-bold mb-4">Goyto.</h2>
+            <h2 class="text-2xl font-bold mb-4"><img src="/assets/logo.png" alt=""></h2>
             <p class="text-gray-400 mb-4">Made using clean, non-toxic ingredients, our products are signed for everyone. Made using clean, non-toxic ingredients, our products are signed.</p>
             <div class="flex space-x-4">
               <a href="#" class="text-white"><i class="fab fa-facebook-f"></i> FACEBOOK</a>
@@ -1009,9 +1006,9 @@
           </div>
           <div class="w-full md:w-auto flex space-x-4 items-center">
             <div class="flex space-x-4">
-              <img src="https://via.placeholder.com/50" alt="Gallery Image 1" class="w-12 h-12 object-cover rounded-md">
-              <img src="https://via.placeholder.com/50" alt="Gallery Image 2" class="w-12 h-12 object-cover rounded-md">
-              <img src="https://via.placeholder.com/50" alt="Gallery Image 3" class="w-12 h-12 object-cover rounded-md">
+              <img src="/assets/ins2.webp" alt="Gallery Image 1" class="w-12 h-12 object-cover rounded-md">
+              <img src="/assets/ins4.webp" alt="Gallery Image 2" class="w-12 h-12 object-cover rounded-md">
+              <img src="/assets/ins3.webp" alt="Gallery Image 3" class="w-12 h-12 object-cover rounded-md">
             </div>
             <div>
               <p class="text-gray-400">(021) 666 888 0000</p>

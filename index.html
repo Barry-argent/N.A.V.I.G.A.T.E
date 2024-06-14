@@ -58,7 +58,9 @@
     header {
         background-color: rgba(0, 0, 0, 0.6);
     }
-
+    .gradient{
+        background: linear-gradient(90deg, rgb(100, 0, 150) 0%, rgb(180, 0, 120) 100%);;
+    }
     input[type="search"] {
         width: 25rem;
         padding: 0 1rem;
@@ -69,7 +71,7 @@
 
     .btn {
         display: inline-block;
-        background-color: #ff4d4d;
+          background: linear-gradient(90deg, rgb(100, 0, 150) 0%, rgb(180, 0, 120) 100%);
         color: white;
         font-weight: bold;
         padding: 0.5rem 1rem;
@@ -79,7 +81,7 @@
     }
 
     .btn:hover {
-        background-color: #e60000;
+        background-color: linear-gradient(90deg, rgb(25, 0, 88) 0%, rgba(57, 34, 79, 0.753) 100%);;
     }
 
     footer {
@@ -99,21 +101,20 @@
 <div style="background-color: rgba(0, 0, 0, 0.3);" class="absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center text-white z-10">
     <header class="w-full flex justify-between items-center p-4">
         <div class="text-xl font-bold"><img src="/assets/logo.png" class="w-1/2"></div>
-        <div>    
-            <input type="search" placeholder="Search" class="outline-none rounded text-black">
-        </div>
-        <nav class="flex space-x-4"> 
-            <a href="#" class="btn">Sign up / Login</a>
+        <nav class="flex gradient  space-x-4"> 
+            <a href="/src/component/signing/form.html" class="btn">Sign up / Login</a>
         </nav>
     </header>
     <main class="flex-1 flex flex-col gap-4 justify-center items-center text-center">
-        <h1 class="text-4xl md:text-6xl font-bold fade-in mb-4">Your Smooth Travel Assistant</h1>
-        <div class="flex gap-4">
-            <a href="#" class="btn">Booking and Additional Service</a>
-            <a href="#" class="btn">Destinations</a>
-            <a href="#" class="btn">Survey and Personalization</a>
+        <h1 class="text-4xl md:text-6xl font-bold fade-in mb-4">Welcome to Your Seamless Travel Assistant</h1>
+        <p class="text-lg md:text-xl fade-in mb-6">Making your travel experiences effortless and unforgettable.</p>
+        
+        <div class="flex fade-in gap-4">
+            <a href="#" class="btn">Booking and Additional Services</a>
+            <a href="#" class="btn">Discover Destinations</a>
+            <a href="#" class="btn">Personalize Your Journey</a>
         </div>
-        <div class="flex items-center fade-in px-4 py-2 rounded-full justify-center bg-red-300 hover:bg-red-500 shadow">
+        <div class="flex items-center fade-in px-4 py-2 rounded-full justify-center gradient  shadow">
             <a href="./src/component/landing.html" class="text-3xl font-bold">Let's Start Our Adventure <i class="uil uil-sign-out-alt"></i></a>
         </div>
     </main>

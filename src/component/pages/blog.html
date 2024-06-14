@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../output.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<style>
+    nav {
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        }
+        .ppl:hover{
+            background:linear-gradient(90deg, rgb(100, 0, 150) 0%, rgb(180, 0, 120) 100%);
+        }
+        .ul{
+           color: rgb(181, 20, 181);
+       }
+       .logo img {
+           width: 100px;
+       }
+   
+       .dropdown-content {
+           display: flex;
+           gap: 1rem;
+           font-size: 1.25rem;
+           font-weight: 400;
+           color: white;
+       }
+   
+       .gradient {
+           background: linear-gradient(90deg, rgb(100, 0, 150) 0%, rgb(180, 0, 120) 100%);
+       }
+   
+       .talk {
+           background: linear-gradient(90deg, rgb(100, 0, 150) 0%, rgb(180, 0, 120) 100%);
+           display: flex;
+           align-items: center;
+           padding: 1rem 1.5rem;
+           border-radius: 9999px;
+           color: white;
+           }
+   </style>
+<body>
+    <div class="max-w-7xl mx-auto p-4">
+        <nav>
+            <div class="logo">
+                <a href="/index.html"><img src="/assets/logo.png" alt="Logo"></a>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-content">
+                    <a href="/src/component/landing.html">Home</a>
+                    <a href="/src/component/pages/about.html">About</a>
+                    <a href="/src/component/pages/dubia.html">Tour</a>
+                    <a href="../pages/blog.html">Blog</a>
+                </div>
+            </div>
+            <div class="talk">
+                <i class="uil ul uil-comment ml-4"></i>
+                <p class="font-[400] ml-4">Let's Talk</p>
+                <i class="uil ul uil-search ml-4"></i>
+            </div>
+        </nav>
+        <!-- Hero Section -->
+        <div class=" fade-in w-full h-screen">
+            <img src="/assets/blog-3-620x377.webp" alt="Background Image" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="relative flex items-center justify-center w-full h-full">
+                <h1 class="text-4xl font-bold text-white sm:text-5xl md:text-6xl">Island Hopping And Weather Tips</h1>
+            </div>
+        </div>
+        <!-- Blog post -->
+        <div class="flex flex-col lg:flex-row">
+            <!-- Main content -->
+            <div class="w-full lg:w-2/3">
+                <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <img src="/assets/blog-3-620x377.webp" alt="Main Image" class="w-full h-64 object-cover rounded-lg mb-4">
+                    <div class="flex items-center mb-4">
+                        <img src="/assets//com.jpeg" alt="Author" class="w-10 h-10 rounded-full">
+                        <div class="ml-4">
+                            <h2 class="text-xl font-semibold">Island Hopping And Weather Tips</h2>
+                            <p class="text-gray-600">By Daniel Mark - June 12, 2024</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel elit eleifend, vehicula urna ac, tempor mauris. Donec fermentum, nulla non elementum tristique, elit lacus vehicula est, ut fringilla libero metus ac lorem.</p>
+                    <blockquote class="bg-purple-100 p-4 rounded-lg mb-4">
+                        <p class="text-purple-700 font-semibold">"We offer competitive advantages in our industry such as compliance with employee certification. Our company is very strategic." - John Smith</p>
+                    </blockquote>
+                    <p class="text-gray-700">Suspendisse potenti. Ut sit amet tincidunt urna. Integer euismod orci a magna fermentum consectetur. Sed consectetur velit at felis volutpat, id sagittis velit interdum.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">Creative Approach To Every Project</h3>
+                    <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor magna at turpis vehicula, nec commodo magna viverra. Fusce fringilla turpis vel nisi gravida, vel euismod orci laoreet.</p>
+                    <img src="/assets/blg4-1.webp" alt="Second Image" class="w-full h-64 object-cover rounded-lg mb-4">
+                </div>
+            </div>
+            <!-- Sidebar -->
+            <div class="w-full lg:w-1/3 lg:pl-6 mt-6 lg:mt-0">
+                <!-- Search -->
+                <div class="bg-white flex items-center p-4 gap-3 rounded-lg shadow-md mb-6">
+                    <input type="text" placeholder="Search..." class="w-full p-2 border border-gray-300 rounded-lg"><i class="uil uil-search text-xl text-whitefont-semibold gradient p-2"></i>
+                </div>
+                <!-- Categories -->
+                <div class="bg-white p-4 rounded-lg shadow-md mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Categories</h3>
+                        <ul class="text-gray-700 flex flex-col px-8 gap-4 items-center">
+                        <div class="flex justify-between w-full items-center">
+                            <i class="uil uil-star"></i>
+                            <li class="mb-2"><a href="#" class="hover:underline font-[500] text-xl">Adventure</a></li>
+                            <p class="hover:text-white hover:gradient text-violet-500 bg-slate-200 px-4 py-2 rounded-[100%] t text-2xl">2</p>
+                        </div>    
+                        <div class="flex justify-between w-full items-center">
+                            <i class="uil uil-star"></i>
+                            <li class="mb-2"><a href="#" class="hover:underline font-[500] text-xl">City Tour</a></li>
+                            <p class="hover:text-white text-violet-500 bg-slate-200 px-4 py-2 rounded-[100%] t text-2xl">3</p>
+                        </div>
+                         <div class="flex justify-between w-full items-center">
+                            <i class="uil uil-star"></i> 
+                            <li class="mb-2"><a href="#" class="hover:underline font-[500] text-xl">Cruise Tour</a></li>
+                            <p class="hover:text-white text-violet-500 bg-slate-200 px-4 py-2 rounded-[100%] text-2xl">4</p>
+                        </div>   
+                         <div class="flex justify-between w-full items-center">
+                            <i class="uil uil-star"></i> 
+                            <li class="mb-2"><a href="#" class="hover:underline font-[500] text-xl">Sea Tour</a></li>
+                            <p class="hover:text-white text-violet-500 bg-slate-200  px-4 py-2 rounded-[100%] t text-2xl">6</p>
+                        </div>   
+                    </ul>
+                </div>
+                <!-- Recent Posts -->
+                <div class="bg-white p-4 rounded-lg shadow-md mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Recent Post</h3>
+                    <ul class="text-gray-700">
+                        <li class="mb-4">
+                            <a href="#" class="flex items-center hover:underline">
+                                <img src="/assets/blg3.webp" alt="Post Image" class="w-20 h-12 object-cover rounded-lg mr-4">
+                                Island Hopping And Weather Tips
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="flex items-center hover:underline">
+                                <img src="/assets/rec.webp" alt="Post Image" class="w-20 h-12 object-cover rounded-lg mr-4">
+                                Beach Day Long
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="flex items-center hover:underline">
+                                <img src="/assets/rec2.webp" alt="Post Image" class="w-20 h-12 object-cover rounded-lg mr-4">
+                                Enjoying The World with Your Company
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="flex items-center hover:underline">
+                                <img src="/assets/rec-3.webp" alt="Post Image" class="w-20 h-12 object-cover rounded-lg mr-4">
+                                Experience the World Company
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Popular Tags -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Popular Tags</h3>
+                    <div class="flex flex-wrap">
+                        <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-lg mr-2 mb-2">Adventure</span>
+                        <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-lg mr-2 mb-2">City Tour</span>
+                        <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-lg mr-2 mb-2">Travel</span>
+                        <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-lg mr-2 mb-2">Booking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+            <!-- FOOTER  -->
+            <footer class="bg-white p-6 mt-12 rounded-lg shadow-md">
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Quick Links:</h3>
+                        <ul>
+                            <li><a href="#" class="text-purple-600 hover:underline  font-[500] mb-2 block"> <i class="uil  gradient p-[5px] text-white rounded-full uil-check"></i>  Recent Work</a></li>
+                            <li><a href="#" class="text-purple-600 hover:underline  font-[500] mb-2 block"> <i class="uil  gradient p-[5px] text-white rounded-full uil-check"></i> Branding</a></li>
+                            <li><a href="#" class="text-purple-600 hover:underline  font-[500] mb-2 block"> <i class="uil  gradient p-[5px] text-white rounded-full uil-check"></i> Our history</a></li>
+                        </ul>
+                    </div>
+                    <div>  
+                        <h3 class="text-lg font-semibold mb-4">&nbsp;</h3>
+                        <ul>
+                            <li><a href="#" class="text-purple-600 hover:underline  font-[500] mb-2 block"> <i class="uil  gradient p-[5px] text-white rounded-full uil-check"></i> Product Gallery</a></li>
+                            <li><a href="#" class="text-purple-600 hover:underline  font-[500] mb-2 block"> <i class="uil  gradient p-[5px] text-white rounded-full uil-check"></i> Web & Interactive</a></li>
+                            <li><a href="#" class="text-purple-600 hover:underline  font-[500] mb-2 block"> <i class="uil  gradient p-[5px] text-white rounded-full uil-check"></i> Help & support</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">&nbsp;</h3>
+                        <ul>
+                            <li><a href="#" class="text-purple-600 hover:underline  font-[500] mb-2 block"> <i class="uil  gradient p-[5px] text-white rounded-full uil-check"></i> About us</a></li>
+                            <li><a href="#" class="text-purple-600 hover:underline  font-[500] mb-2 block"> <i class="uil  gradient p-[5px] text-white rounded-full uil-check"></i> Branded Merchandise</a></li>
+                            <li><a href="#" class="text-purple-600 hover:underline  font-[500] mb-2 block"> <i class="uil  gradient p-[5px] text-white rounded-full uil-check"></i> Our Awards</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">&nbsp;</h3>
+                        <ul>
+                            <li><a href="#" class="text-purple-600 hover:underline  font-[500] mb-2 block"><i class="uil uil-phone"></i> 666 888 0000</a></li>
+                            <li><a href="mailto:needhelp@gmail.com" class="text-purple-600 hover:underline  font-[500] mb-2 block"><i class="uil uil-envelope"></i> needhelp@gmail.com</a></li>
+                        </ul>
+                        <div class="flex space-x-4 mt-4">
+                            <a href="#" class="text-purple-600"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-purple-600"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-purple-600"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-purple-600"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
+                    <img src="/assets/ins1.webp" alt="Gallery Image 1" class="w-full h-24 object-cover rounded-lg">
+                    <img src="/assets/ins2.webp" alt="Gallery Image 2" class="w-full h-24 object-cover rounded-lg">
+                    <img src="/assets/ins3.webp" alt="Gallery Image 3" class="w-full h-24 object-cover rounded-lg">
+                    <img src="/assets/ins4.webp" alt="Gallery Image 4" class="w-full h-24 object-cover rounded-lg">
+                    <img src="/assets/ins5.webp" alt="Gallery Image 5" class="w-full h-24 object-cover rounded-lg">
+                </div>
+                <p class="text-center text-gray-600">&copy; Copyright 2024. All Rights Reserved.</p>
+            </footer>
+    </div>
+</body>
+</html>

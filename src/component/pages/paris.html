@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N.A.V.E.G.A.T.E</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="../../output.css">
+</head>
+<style>
+ nav {
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        position: absolute;
+        width: 100%;
+        top: 0;
+    }
+    .uil{
+        color: rgb(181, 20, 181);
+    }
+    .logo img {
+        width: 100px;
+    }
+
+    .dropdown-content {
+        display: flex;
+        gap: 1rem;
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: white;
+    }
+
+    .gradient {
+        background: linear-gradient(90deg, rgb(100, 0, 150) 0%, rgb(180, 0, 120) 100%);
+    }
+
+    .talk {
+        background: linear-gradient(90deg, rgb(100, 0, 150) 0%, rgb(180, 0, 120) 100%);
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        border-radius: 9999px;
+        color: white;
+        }
+</style>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="/assets/logo.png" alt="Logo">
+        </div>
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <a href="/src/component/landing.html">Home</a>
+                <a href="/src/component/pages/about.html">About</a>
+                <a href="/src/component/pages/dubia.html">Tour</a>
+                <a href="../pages/blog.html">Blog</a>
+            </div>
+        </div>
+        <div class="talk">
+            <i class="uil uil-comment ml-4"></i>
+            <p class="font-[400] ml-4">Let's Talk</p>
+            <i class="uil uil-search ml-4"></i>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <div class=" fade-in w-full h-screen">
+        <img src="/assets/bread-bg.webp" alt="Background Image" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative flex items-center justify-center w-full h-full">
+            <h1 class="text-4xl font-bold text-white sm:text-5xl md:text-6xl">Toronto, Canada</h1>
+        </div>
+    </div>
+    <!-- SECTION 2 -->
+    <div class="container mb-6  mx-auto p-6">
+        <!-- Header -->
+        <h1 class="text-4xl font-bold mb-6">Paradise, Places</h1>
+
+        <!-- Content Wrapper -->
+        <div class="flex items-start">
+            <!-- Left Column -->
+            <div class="w-full lg:w-2/3">
+                <!-- Thumbnails -->
+                <div class="flex space-x-2 mb-4">
+                    <img src="/assets/usa.webp" alt="Thumbnail" class="w-12 h-12 object-cover rounded">
+                    <img src="/assets/dubai.webp" alt="Thumbnail" class="w-12 h-12 object-cover rounded">
+                    <img src="/assets/indinosia.webp" alt="Thumbnail" class="w-12 h-12 object-cover rounded">
+                </div>
+                <!-- Main Image -->
+                <div class="relative">
+                    <img src="/assets/usa.webp" alt="Main Image" class="w-full h-96 object-cover rounded">
+                    <div class="absolute bottom-4 right-4 flex space-x-2">
+                        <button class="bg-white py-2 px-4 rounded shadow">Gallery</button>
+                        <button class="bg-white py-2 px-4 rounded shadow">Video</button>
+                    </div>
+                </div>
+
+                <!-- Icons and Texts -->
+                <div class="grid grid-cols-2  bg-white p-6 rounded-lg shadow-lg sm:grid-cols-4 gap-4 mt-6 text-center">
+                    <div class="flex flex-col items-center">
+                        <i class="uil uil-bed text-3xl mb-2"></i>
+                        <p class="font-semibold">Accommodation</p>
+                        <p>5 Star Hotel</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="uil uil-money-bill text-3xl mb-2"></i>
+                        <p class="font-semibold">Admission Fee</p>
+                        <p>No</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="uil uil-map-marker text-3xl mb-2"></i>
+                        <p class="font-semibold">Arrival City</p>
+                        <p>London</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="uil uil-calender text-3xl mb-2"></i>
+                        <p class="font-semibold">Best Season</p>
+                        <p>Autumn</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="uil uil-plane-departure text-3xl mb-2"></i>
+                        <p class="font-semibold">Departure City</p>
+                        <p>Kathmandu</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="uil uil-check-circle text-3xl mb-2"></i>
+                        <p class="font-semibold">Free Cancel</p>
+                        <p>Yes</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="uil uil-user-nurse text-3xl mb-2"></i>
+                        <p class="font-semibold">Tour Guide</p>
+                        <p>Guided</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="uil uil-hotel text-3xl mb-2"></i>
+                        <p class="font-semibold">Hotel Transfer</p>
+                        <p>Available</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="uil uil-shield-check text-3xl mb-2"></i>
+                        <p class="font-semibold">Insurance</p>
+                        <p>Cover 60%</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="uil uil-globe text-3xl mb-2"></i>
+                        <p class="font-semibold">Language</p>
+                        <p>English</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="uil uil-calendar-alt text-3xl mb-2"></i>
+                        <p class="font-semibold">Minimum Age</p>
+                        <p>18</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="uil uil-user text-3xl mb-2"></i>
+                        <p class="font-semibold">Maximum Age</p>
+                        <p>54</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column -->
+            <div class="w-full lg:w-1/3 mt-6 lg:mt-0 lg:ml-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="text-lg mb-4">
+                        <p>From <span class="font-semibold">$78000</span> / Child</p>
+                        <p>From <span class="font-semibold">$89000</span> / Adult</p>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-purple-800 to-pink-600 text-white py-2 rounded-lg shadow">
+                        Check Availability
+                    </button>
+                    <p class="mt-4 text-center text-gray-500">
+                        Need help with booking? <a href="#" class="text-blue-500">Send Us A Message</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SECTPON 3 -->
+    <div class="max-w-4xl  mb-6  bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold mb-4">Overview</h2>
+        <p class="mb-4">Fringilla a praesent aliquam proin ultrices imperdiet neque. Cras orci fusce pulvinar ridiculus integer fringilla placerat senectus fermentum interdum. Non libero hac commodo torquent finibus metus. Duis in nisi diam nunc habitasse lorem elit. Ante porta accumsan sociosqu faucibus ultrices posuere. Vivamus id efficitur tristique hac elit egestas. Sed efficitur fringilla habitant tempus tincidunt facilisis auctor pellentesque sem. Aliquet taciti senectus maecenas duis rhoncus inceptos. Mus eleifend cras porta habitant ante ac lorem. Cubilia neque pretium at eu lectus id consequat metus ipsum pulvinar gravida. Tempor imperdiet magnis phasellus si sollicitudin quisque.</p>
+        <p class="mb-4">Non libero hac commodo torquent finibus metus. Duis in nisi diam nunc habitasse lorem elit. Ante porta accumsan sociosqu faucibus ultrices posuere. Vivamus id efficitur tristique hac elit egestas. Sed efficitur fringilla habitant tempus tincidunt facilisis auctor pellentesque sem.</p>
+        <h2 class="text-2xl font-bold mt-8 mb-4">Top Highlights</h2>
+        <p class="mb-4">Ante porta accumsan sociosqu faucibus ultrices posuere. Vivamus id efficitur tristique hac elit egestas. Sed efficitur fringilla habitant tempus tincidunt facilisis auctor pellentesque sem. Aliquet taciti senectus maecenas duis rhoncus inceptos. Mus eleifend cras porta habitant ante ac lorem.</p>
+        <ul class="list-disc list-inside mb-4 space-y-2">
+            <li>Easily generate images with detailed text prompts</li>
+            <li>Customize your images with different styles, moods, colors</li>
+            <li>Generate high-quality images with up to 8K resolution</li>
+            <li>Visit Tengboche the biggest and oldest monastery in the region</li>
+            <li>Travel through the Sherpa villages of Namche, Khumjung, Khunde, and Dingboche</li>
+            <li>Enjoy the amazing view of the Himalayas from Kala Patthar</li>
+        </ul>
+        <h2 class="text-2xl font-bold mt-8 mb-4">Included and Excluded</h2>
+        <div class="flex flex-col md:flex-row md:space-x-4">
+            <div class="bg-purple-100 p-4 rounded-lg flex-1 mb-4 md:mb-0">
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Meal as per hotel Plan and drinks free too.</li>
+                    <li>Return airport and round trip transfers.</li>
+                    <li>Accommodation on twin sharing basis.</li>
+                    <li>The above per day disposal basis</li>
+                    <li>Enjoy Brussels day tour Overnight Brussels</li>
+                </ul>
+            </div>
+            <div class="bg-red-100 p-4 rounded-lg flex-1">
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Meal as per hotel Plan and drinks free too.</li>
+                    <li>Return airport and round trip transfers.</li>
+                    <li>Accommodation on twin sharing basis.</li>
+                    <li>The above per day disposal basis</li>
+                    <li>Enjoy Brussels day tour Overnight Brussels</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- SECTION 4 -->
+    <div class="bg-gray-100 mb-6 flex items-center justify-start min-h-screen">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+            <h1 class="text-xl font-bold mb-4">You can send your enquiry via the form below.</h1>
+            <h2 class="text-lg font-semibold mb-6">Trip name: <span class="font-normal">Toronto, Canada</span></h2>
+            <form>
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Your name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Your Name" required
+                        class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+    
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Your email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email" required
+                        class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+    
+                <div class="mb-4">
+                    <label for="country" class="block text-sm font-medium text-gray-700">Country:</label>
+                    <select id="country" name="country" required
+                        class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="">Choose a country</option>
+                        <!-- Add country options here -->
+                    </select>
+                </div>
+    
+                <div class="mb-4">
+                    <label for="contact-number" class="block text-sm font-medium text-gray-700">Contact number:</label>
+                    <input type="tel" id="contact-number" name="contact-number" placeholder="Enter Your Contact Number"
+                        required
+                        class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+    
+                <div class="flex space-x-4 mb-4">
+                    <div class="w-1/2">
+                        <label for="adults" class="block text-sm font-medium text-gray-700">No. of Adults:</label>
+                        <input type="number" id="adults" name="adults" placeholder="Enter Number of Adults" required
+                            class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+    
+                    <div class="w-1/2">
+                        <label for="children" class="block text-sm font-medium text-gray-700">No. of children:</label>
+                        <input type="number" id="children" name="children" placeholder="Enter Number of Children" required
+                            class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                </div>
+    
+                <div class="mb-4">
+                    <label for="subject" class="block text-sm font-medium text-gray-700">Enquiry Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Enquiry Subject" required
+                        class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+    
+                <div class="mb-6">
+                    <label for="message" class="block text-sm font-medium text-gray-700">Your Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Enter Your Message" required
+                        class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                </div>
+    
+                <div>
+                    <button type="submit"
+                        class="w-full py-3 px-6 bg-purple-600 text-white font-semibold rounded-md shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50">
+                        Send Email
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- SECTION 5  SCROOL JS-->
+     <!-- SECTION 6 -->
+     <div class="bg-gray-100 mb-6 flex items-center justify-center min-h-screen">
+        <div class="w-full max-w-6xl p-4">
+            <h2 class="text-2xl font-bold mb-6">Related trips you might be interested in</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/assets/canada-990x490.webp" alt="United Arab Emirates Desert" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <span class="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded-full mb-2">Emirates</span>
+                        <h3 class="text-lg font-bold mb-2"><i class="uil uil-map-marker"></i> United Arab Emirates Desert</h3>
+                        <p class="text-gray-600 mb-4"><i class="uil uil-calendar-alt mr-1"></i> 12 Days</p>
+                        <a href="./uae.html" class="inline-block bg-purple-600 text-white text-sm px-4 py-2 rounded-md shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50">View Details</a>
+                    </div>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/assets/paris.webp" alt="France Eiffel Tower" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <span class="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded-full mb-2">France</span>
+                        <h3 class="text-lg font-bold mb-2"><i class="uil uil-map-marker"></i> France Eiffel Tower</h3>
+                        <p class="text-gray-600 mb-4"><i class="uil uil-calendar-alt mr-1"></i> 7 Days</p>
+                        <a href="./dubia.html" class="inline-block bg-purple-600 text-white text-sm px-4 py-2 rounded-md shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50">View Details</a>
+                    </div>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/assets/africa-990x490.webp" alt="Paris, France" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <span class="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded-full mb-2"> <i class="uil uil-map-marker"></i>France, Italy</span>
+                        <h3 class="text-lg font-bold mb-2"> <i class="uil uil-map-marker"></i>Paris, France</h3>
+                        <p class="text-gray-600 mb-4"><i class="uil uil-calendar-alt mr-1"></i> 8 Days</p>
+                        <a href="./paris.html" class="inline-block bg-purple-600 text-white text-sm px-4 py-2 rounded-md shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        </div>
+       
+        <!-- SECTION 7 --> 
+            <!-- Quick Links Section -->
+            <div class="flex flex-wrap justify-between mb-10">
+            <div>
+                <h2 class="text-xl font-bold mb-4">Quick Links:</h2>
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <span class="inline-block bg-purple-600 text-white rounded-full w-4 h-4 mr-2"></span> Recent Work
+                    </li>
+                    <li class="flex items-center">
+                        <span class="inline-block bg-purple-600 text-white rounded-full w-4 h-4 mr-2"></span> Branding
+                    </li>
+                    <li class="flex items-center">
+                        <span class="inline-block bg-purple-600 text-white rounded-full w-4 h-4 mr-2"></span> Our history
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="space-y-2 mt-8">
+                    <li class="flex items-center">
+                        <span class="inline-block bg-purple-600 text-white rounded-full w-4 h-4 mr-2"></span> Product Gallery
+                    </li>
+                    <li class="flex items-center">
+                        <span class="inline-block bg-purple-600 text-white rounded-full w-4 h-4 mr-2"></span> Web & Interactive
+                    </li>
+                    <li class="flex items-center">
+                        <span class="inline-block bg-purple-600 text-white rounded-full w-4 h-4 mr-2"></span> Help & support
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="space-y-2 mt-8">
+                    <li class="flex items-center">
+                        <span class="inline-block bg-purple-600 text-white rounded-full w-4 h-4 mr-2"></span> About us
+                    </li>
+                    <li class="flex items-center">
+                        <span class="inline-block bg-purple-600 text-white rounded-full w-4 h-4 mr-2"></span> Branded Merchandise
+                    </li>
+                    <li class="flex items-center">
+                        <span class="inline-block bg-purple-600 text-white rounded-full w-4 h-4 mr-2"></span> Our Awards
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-8">
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i> 666 888 0000
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> needhelp@gmail.com
+                    </li>
+                    <li class="flex items-center space-x-4 mt-4">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-youtube"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-10">
+            <img src="/assets/ins1.webp" alt="Gallery Image 1" class="w-full h-24 object-cover rounded-lg">
+            <img src="/assets/ins2.webp" alt="Gallery Image 2" class="w-full h-24 object-cover rounded-lg">
+            <img src="/assets/ins3.webp" alt="Gallery Image 3" class="w-full h-24 object-cover rounded-lg">
+            <img src="/assets/ins4.webp" alt="Gallery Image 4" class="w-full h-24 object-cover rounded-lg">
+            <img src="/assets/ins5.webp" alt="Gallery Image 5" class="w-full h-24 object-cover rounded-lg">
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="text-center">
+            <p>© Copyright 2024. All Rights Reserved.</p>
+        </footer> 
+ <!-- Font Awesome for icons (optional, for the calendar icon) -->
+ <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
